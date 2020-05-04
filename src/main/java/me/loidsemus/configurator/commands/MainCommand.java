@@ -30,7 +30,7 @@ public class MainCommand implements CommandExecutor {
             }
 
             plugin.loadConfigAndMessages();
-            sender.sendMessage("Config and messagse reloaded");
+            sender.sendMessage("Config and messages reloaded");
             return true;
         }
         if (!(sender instanceof Player)) {
