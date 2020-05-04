@@ -38,6 +38,10 @@ public class MainCommand implements CommandExecutor {
             return true;
         }
         Player player = (Player) sender;
+        if (!player.hasPermission("configurator.use")) {
+            player.sendMessage(Messages.get(LangKey.INSUFFICIENT_PERMISSION, true));
+            return true;
+        }
         player.sendMessage(Messages.get(LangKey.OPENING_GUI, true));
 
         YamlConfiguration configuration = YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), "test.yml"));
