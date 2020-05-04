@@ -44,7 +44,6 @@ public class MainCommand implements CommandExecutor {
         }
         player.sendMessage(Messages.get(LangKey.OPENING_GUI, true));
 
-        YamlConfiguration configuration = YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), "test.yml"));
         new PluginBrowserMenu(plugin).show(player);
 
         return true;
