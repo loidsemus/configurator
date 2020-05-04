@@ -4,8 +4,8 @@ import com.github.stefvanschie.inventoryframework.GuiItem;
 import me.loidsemus.configurator.Configurator;
 import me.loidsemus.configurator.gui.ListMenu;
 import me.loidsemus.configurator.messages.LangKey;
-import me.loidsemus.configurator.messages.Messages;
 import me.loidsemus.configurator.util.ItemBuilder;
+import me.loidsemus.pluginlib.Messages;
 import org.bukkit.Material;
 import org.bukkit.plugin.Plugin;
 

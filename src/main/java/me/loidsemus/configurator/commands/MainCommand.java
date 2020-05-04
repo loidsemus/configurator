@@ -3,7 +3,7 @@ package me.loidsemus.configurator.commands;
 import me.loidsemus.configurator.Configurator;
 import me.loidsemus.configurator.gui.menus.PluginBrowserMenu;
 import me.loidsemus.configurator.messages.LangKey;
-import me.loidsemus.configurator.messages.Messages;
+import me.loidsemus.pluginlib.Messages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

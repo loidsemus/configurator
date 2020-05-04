@@ -1,6 +1,8 @@
 package me.loidsemus.configurator.messages;
 
-public enum LangKey {
+import me.loidsemus.pluginlib.Translatable;
+
+public enum LangKey implements Translatable {
     PREFIX("&c[Configurator]&r"),
     INSUFFICIENT_PERMISSION("&cInsufficient permission"),
 

@@ -1,7 +1,7 @@
 package me.loidsemus.configurator.gui.input;
 
 import me.loidsemus.configurator.messages.LangKey;
-import me.loidsemus.configurator.messages.Messages;
+import me.loidsemus.pluginlib.Messages;
 import org.bukkit.conversations.ConversationContext;
 import org.bukkit.conversations.NumericPrompt;
 import org.bukkit.conversations.Prompt;

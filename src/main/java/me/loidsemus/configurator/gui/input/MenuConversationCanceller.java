@@ -2,7 +2,7 @@ package me.loidsemus.configurator.gui.input;
 
 import com.github.stefvanschie.inventoryframework.Gui;
 import me.loidsemus.configurator.messages.LangKey;
-import me.loidsemus.configurator.messages.Messages;
+import me.loidsemus.pluginlib.Messages;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationCanceller;
 import org.bukkit.conversations.ConversationContext;

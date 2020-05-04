@@ -1,18 +1,9 @@
 package me.loidsemus.configurator.internal;
 
-import me.loidsemus.configurator.gui.Hierarchical;
-import me.loidsemus.configurator.gui.input.MenuConversationCanceller;
-import me.loidsemus.configurator.gui.input.NumberPrompt;
-import me.loidsemus.configurator.gui.input.TextPrompt;
 import me.loidsemus.configurator.messages.LangKey;
-import me.loidsemus.configurator.messages.Messages;
+import me.loidsemus.pluginlib.Messages;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.conversations.ConversationFactory;
-import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryClickEvent;
-
-import java.util.function.Consumer;
 
 public enum ValueType {
     SECTION(Messages.get(LangKey.TYPE_SECTION, false), Material.BOOK),

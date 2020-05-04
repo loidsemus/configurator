@@ -2,9 +2,10 @@ package me.loidsemus.configurator;
 
 import me.loidsemus.configurator.commands.MainCommand;
 import me.loidsemus.configurator.config.PluginConfig;
-import me.loidsemus.configurator.messages.Messages;
+import me.loidsemus.configurator.messages.LangKey;
 import me.loidsemus.configurator.metrics.MetricsLite;
 import me.loidsemus.configurator.util.updatechecker.UpdateChecker;
+import me.loidsemus.pluginlib.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -45,7 +46,7 @@ public final class Configurator extends JavaPlugin {
         }
 
         try {
-            Messages.load(getDataFolder(), languageCode);
+            Messages.load(getDataFolder(), languageCode, LangKey.values(), LangKey.PREFIX);
         } catch (FileNotFoundException e) {
             getLogger().log(Level.SEVERE, "No language file matches the code \"" + languageCode + "\"! Falling back to default values" +
                     " Please make one by copying the contents of lang_default.properties, or changing the config value to \"default\"." +
