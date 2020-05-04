@@ -1,0 +1,1 @@
+#### Configurator lets you edit configuration files of any plugin with a GUI inside your server. It features a file browser to browse configuration files in plugin folders, and a sort of configuration browser that lets you browse nodes in a file.
