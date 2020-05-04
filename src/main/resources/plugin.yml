@@ -1,0 +1,19 @@
+name: Configurator
+version: @version@
+main: me.loidsemus.configurator.Configurator
+api-version: '1.13'
+authors: [loidsemus]
+description: Edit plugin configs with a GUI
+
+commands:
+  configurator:
+    description: Main Configurator command
+    aliases: [cfg]
+
+permissions:
+  configurator.use:
+    description: Use configurator
+    default: op
+  configurator.reload:
+    description: Reload config and messages
+    default: op

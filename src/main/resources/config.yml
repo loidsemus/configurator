@@ -1,0 +1,5 @@
+lang: default
+
+blacklisted_plugins:
+  #- Essentials
+  #- ExamplePlugin
