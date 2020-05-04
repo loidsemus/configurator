@@ -4,6 +4,8 @@ import me.loidsemus.configurator.commands.MainCommand;
 import me.loidsemus.configurator.config.PluginConfig;
 import me.loidsemus.configurator.messages.Messages;
 import me.loidsemus.configurator.metrics.MetricsLite;
+import me.loidsemus.configurator.util.updatechecker.UpdateChecker;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -22,6 +24,13 @@ public final class Configurator extends JavaPlugin {
         registerCommands();
 
         new MetricsLite(this, 7408);
+        UpdateChecker updateChecker = new UpdateChecker(this, 78334);
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () ->
+                        updateChecker.getNewVersion(version -> {
+                                getLogger().log(Level.WARNING, "There is a new version available on SpigotMC: " + version);
+                                getLogger().log(Level.INFO, "Download at: https://www.spigotmc.org/resources/configurator.78334/");
+                        }),
+                0L, 60L * 30L * 20L);
     }
 
     public void loadConfigAndMessages() {
