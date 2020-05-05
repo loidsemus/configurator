@@ -31,7 +31,8 @@ dependencies {
 }
 
 shadowJar {
-    //relocate 'com.github.stefvanschie.inventoryframework', 'me.loidsemus.configurator.gui.framework'
+    relocate 'com.github.stefvanschie.inventoryframework', 'me.loidsemus.configurator.gui.framework'
+    relocate 'me.loidsemus.pluginlib', 'me.loidsemus.configurator.pluginlib'
     archiveName("Configurator-${this.version}.jar")
     minimize()
 }
