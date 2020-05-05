@@ -10,7 +10,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Objects;
 import java.util.logging.Level;
 
@@ -28,8 +27,8 @@ public final class Configurator extends JavaPlugin {
         UpdateChecker updateChecker = new UpdateChecker(this, 78334);
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () ->
                         updateChecker.getNewVersion(version -> {
-                                getLogger().log(Level.WARNING, "There is a new version available on SpigotMC: " + version);
-                                getLogger().log(Level.INFO, "Download at: https://www.spigotmc.org/resources/configurator.78334/");
+                            getLogger().log(Level.WARNING, "There is a new version available on SpigotMC: " + version);
+                            getLogger().log(Level.INFO, "Download at: https://www.spigotmc.org/resources/configurator.78334/");
                         }),
                 0L, 60L * 30L * 20L);
     }
@@ -45,15 +44,11 @@ public final class Configurator extends JavaPlugin {
             return;
         }
 
-        try {
-            Messages.load(getDataFolder(), languageCode, LangKey.values(), LangKey.PREFIX);
-        } catch (FileNotFoundException e) {
-            getLogger().log(Level.SEVERE, "No language file matches the code \"" + languageCode + "\"! Falling back to default values" +
-                    " Please make one by copying the contents of lang_default.properties, or changing the config value to \"default\"." +
-                    " DO NOT change the values in lang_default.properties!");
-            Messages.useDefaults();
+
+        if (!Messages.load(getDataFolder(), languageCode, LangKey.values(), LangKey.PREFIX)) {
             return;
         }
+
 
         getLogger().log(Level.INFO, "Loaded configs and messages (" + languageCode + ")");
     }
