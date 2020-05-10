@@ -9,7 +9,6 @@ import me.loidsemus.configurator.util.ItemBuilder;
 import me.loidsemus.pluginlib.Messages;
 import org.apache.commons.io.comparator.DirectoryFileComparator;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
@@ -64,7 +63,6 @@ public class FileBrowserMenu extends ListMenu {
 
                 consumer = event -> {
                     event.setCancelled(true);
-                    Player p = (Player) event.getWhoClicked();
                     //p.sendMessage("Loading config: " + file.getPath());
                     ConfigUtil.loadConfigFileAsync(plugin, file, config -> {
                         ConfigMenu menu = new ConfigMenu(this, plugin, targetPlugin, file, config);

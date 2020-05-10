@@ -13,7 +13,7 @@ public enum ValueType {
     UNREADABLE(Messages.get(LangKey.TYPE_UNREADABLE, false), Material.REDSTONE);
 
     private final String name;
-    private Material material;
+    private final Material material;
 
     ValueType(String name, Material material) {
         this.name = name;

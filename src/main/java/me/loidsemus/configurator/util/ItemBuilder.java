@@ -79,7 +79,7 @@ public class ItemBuilder {
         Validate.notNull(displayname, "The Displayname is null.");
         this.item = new ItemStack(material, amount);
         this.material = material;
-        if (((amount > material.getMaxStackSize()) || (amount <= 0)) && (!unsafeStackSize)) amount = 1;
+        if (((amount > material.getMaxStackSize()) || (amount <= 0)) && !unsafeStackSize) amount = 1;
         this.amount = amount;
         this.displayname = displayname;
     }
@@ -150,7 +150,7 @@ public class ItemBuilder {
      * @param amount Amount for the ItemStack
      */
     public ItemBuilder amount(int amount) {
-        if (((amount > material.getMaxStackSize()) || (amount <= 0)) && (!unsafeStackSize)) amount = 1;
+        if (((amount > material.getMaxStackSize()) || (amount <= 0)) && !unsafeStackSize) amount = 1;
         this.amount = amount;
         return this;
     }

@@ -91,7 +91,7 @@ public class ConfigMenu extends ListMenu implements Hierarchical {
             }
 
             // Make item represent boolean state
-            if (type == ValueType.BOOLEAN && (!(boolean) value)) {
+            if (type == ValueType.BOOLEAN && !(boolean) value) {
                 itemBuilder.material(Material.RED_WOOL);
             }
 

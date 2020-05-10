@@ -50,14 +50,17 @@ public enum LangKey implements Translatable {
         this.args = args;
     }
 
+    @Override
     public String getDefaultValue() {
         return defaultValue;
     }
 
+    @Override
     public String[] getArgs() {
         return args;
     }
 
+    @Override
     public String getKey() {
         return this.toString().toLowerCase();
     }
