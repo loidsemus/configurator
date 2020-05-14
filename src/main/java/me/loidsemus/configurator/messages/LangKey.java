@@ -7,6 +7,8 @@ public enum LangKey implements Translatable {
     INSUFFICIENT_PERMISSION("&cInsufficient permission"),
 
     OPENING_GUI("Opening GUI"),
+    READ_ONLY_MODE("Read-only mode, config won't be saved on exit"),
+    WRITE_ACCESS("You have write access"),
     HEADER_PLUGIN_BROWSER_MENU("Configurable plugins"),
     HEADER_FILE_BROWSER_MENU("{pluginName} > File browser", "pluginName"),
     HEADER_CONFIG_MENU("{pluginName} > {fileName}", "pluginName", "fileName"),

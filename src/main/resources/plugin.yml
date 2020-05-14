@@ -17,3 +17,6 @@ permissions:
   configurator.reload:
     description: Reload config and messages
     default: op
+  configurator.write:
+    description: Write and save config files
+    default: false

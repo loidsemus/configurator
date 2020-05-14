@@ -52,7 +52,7 @@ public class ConfigMenu extends ListMenu implements Hierarchical {
 
         setOnClose(event -> {
             Player player = (Player) event.getPlayer();
-            if (doSave) {
+            if (doSave && player.hasPermission("configurator.write")) {
                 player.sendMessage(Messages.get(LangKey.CONFIG_SAVING, true, targetPlugin.getName(), file.getName()));
                 Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
                     try {

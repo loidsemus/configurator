@@ -7,10 +7,7 @@ import me.loidsemus.pluginlib.Messages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-
-import java.io.File;
 
 public class MainCommand implements CommandExecutor {
 
@@ -42,7 +39,14 @@ public class MainCommand implements CommandExecutor {
             player.sendMessage(Messages.get(LangKey.INSUFFICIENT_PERMISSION, true));
             return true;
         }
+
         player.sendMessage(Messages.get(LangKey.OPENING_GUI, true));
+        if (player.hasPermission("configurator.write")) {
+            player.sendMessage(Messages.get(LangKey.WRITE_ACCESS, true));
+        }
+        else {
+            player.sendMessage(Messages.get(LangKey.READ_ONLY_MODE, true));
+        }
 
         new PluginBrowserMenu(plugin).show(player);
 
